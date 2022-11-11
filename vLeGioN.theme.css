@@ -1,0 +1,296 @@
+/**
+* @name vLeGioN Theme
+* @author LeGioN_PsyQ#3114
+* @description Ein Cooles Maus Hover Effekt
+* @source https://github.com/vLeGioN
+* @updateUrl 
+* @authorId 497428880596926474
+* @version 1.0
+*/
+@import url("https://github.com/vLeGioN/Discord-Theme/blob/57a860350b02b4ab307406984f50ee20724ff8a2/custom.css");
+
+/*
+ unread
+ 
+:root {
+	--mainColor01: #2c8533;
+    --newmessage01: rgba(255,0,0) ;
+    --gradientColor01:rgba(255,0,212,1);
+    --gradientColor02:rgba(91,190,229,1);
+
+    --themeColor1: rgba(255, 0, 212, 0.5);
+    --themeColor2: rgb(91, 190, 229, 0.9);
+
+    --customFont: 'Roboto', sans-serif;
+    --font-display: var(--customFont);
+    --homeImage: url('https://limeshark.dev/img/n/icon.png');
+    --homeImageSize: cover;
+
+	--backgroundColor01:#0000008c;
+    --backgroundColor: #000000;
+    --backgroundImage: url('https://limeshark.dev/img/n/background.jpg');
+    --backgroundPosition: center;
+    --backgroundSize: cover;
+    --backgroundRepeat: no-repeat;
+    --backgroundBlur: 100px;
+    --backgroundOpacity: .65;
+    --backgroundCode: rgba(0,0,0,.5);
+    --backgroundName: rgba(0,0,0,.5);
+}
+/**************************************************************************
+				Discord HOME BUTTON
+**************************************************************************/
+#app-mount .tutorialContainer-1pL9QS .childWrapper-1j_1ub>svg{display:none!important}
+#app-mount .tutorialContainer-1pL9QS .childWrapper-1j_1ub::after{
+    position:absolute;
+    content:"";
+    width:36px;
+    height:36px;
+    top:6px;
+    left:6px;
+    background-image:linear-gradient(-45deg,var(--gradientColor01),var(--gradientColor02));
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
+    -webkit-mask-box-image:url("https://i.imgur.com/6gPQfIO.png");
+    mask-image:url("https://i.imgur.com/6gPQfIO.png");
+}
+/*--- ENDE ---*/
+
+/**************************************************************************
+				Benutzer HOVER EFFEKT
+**************************************************************************/
+#app-mount .layout-1qmrhw::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:2px;
+    width:100%;
+    background-color:var(--gradientColor01);
+    background-image:linear-gradient(-45deg,var(--gradientColor01),var(--gradientColor02))!important;
+    -webkit-transition:transform .2s ease;
+    -ms-transition:transform .2s ease;
+    -o-transition:transform .2s ease;
+    -moz-transition:transform .2s ease;
+    transition:transform .2s ease;
+    -webkit-transform:translateX(100%);
+    -ms-transform:translateX(100%);
+    -moz-transform:translateX(100%);
+    -o-transform:translateX(100%);
+    transform:translateX(100%);
+}
+#app-mount .clickable-28SzVr.container-1oeRFJ:hover .layout-1qmrhw::after,
+#app-mount .selected-1-Z6gm .layout-1qmrhw::after{
+    -webkit-transform:translateX(0);
+    -ms-transform:translateX(0);
+    -moz-transform:translateX(0);
+    -o-transform:translateX(0);
+    transform:translateX(0);
+}
+#app-mount .layout-1qmrhw{position:relative;overflow:hidden}
+
+/*--- ENDE ---*/
+/**************************************************************************
+				Benutzer Role Trenner Style
+**************************************************************************/
+.membersGroup-2eiWxl {
+    position: relative;
+    z-index: 2;
+    padding: 19px 8px 5px 16px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #ffffff;
+    border-bottom-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, transparent, var(--themeColor1), var(--themeColor2), transparent) 1;
+}
+
+.membersGroup-2eiWxl::after,
+.membersGroup-2eiWxl::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    background-color: transparent;
+    z-index: -1;
+}
+
+.membersGroup-2eiWxl::before {
+    left: 0;
+    box-shadow: 80px 50px 30px 0 var(--themeColor2);
+}
+
+.membersGroup-2eiWxl::after {
+    right: 0;
+    box-shadow: -80px 50px 30px 0 var(--themeColor1);
+}
+
+.membersGroup-2eiWxl span {
+    text-shadow: 0 1px 5px #000;
+}
+/*--- ENDE --- */
+/* Member INFO Bereich FARBE */
+.activity-2EQDZv {
+    color: rgb(255, 255, 255);
+}
+/*--- ENDE ---*/
+/***********************************************************************
+			Channel Liste Hover Effekt
+***********************************************************************/
+#app-mount .modeSelected-3DmyhH .content-1gYQeQ,
+#app-mount .modeSelected-3DmyhH:hover .content-1gYQeQ,
+#app-mount .wrapper-NhbLHG:hover .content-1gYQeQ{
+    background-color:var(--backgroundColor01);
+}
+#app-mount .modeSelected-3DmyhH .content-1gYQeQ::after,
+#app-mount .wrapper-NhbLHG:hover .content-1gYQeQ::after{
+    -webkit-transform:translateX(0);
+    -ms-transform:translateX(0);
+    -moz-transform:translateX(0);
+    -o-transform:translateX(0);
+    transform:translateX(0);
+}
+
+#app-mount .content-1gYQeQ{position:relative;overflow:hidden}
+
+#app-mount .content-1gYQeQ::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:0;
+    height:2px;
+    width:100%;
+    background-color:var(--gradientColor01);
+    background-image:linear-gradient(-45deg,var(--gradientColor01),var(--gradientColor02))!important;
+    -webkit-transition:transform .2s ease;
+    -ms-transition:transform .2s ease;
+    -o-transition:transform .2s ease;
+    -moz-transition:transform .2s ease;
+    transition:transform .2s ease;
+    -webkit-transform:translateX(-100%);
+    -ms-transform:translateX(-100%);
+    -moz-transform:translateX(-100%);
+    -o-transform:translateX(-100%);
+    transform:translateX(-100%);
+}
+/*--- ENDE ---*/
+/***********************************************************************
+				CHANNEL UNGELESEN EFFEKT
+***********************************************************************/
+#app-mount .unread-36eUEm{
+    height:8px;
+    width:8px;
+    border-radius:4px;
+    left:4px;
+    -webkit-transition:box-shadow .2s ease;
+    -ms-transition:box-shadow .2s ease;
+    -o-transition:box-shadow .2s ease;
+    -moz-transition:box-shadow .2s ease;
+    transition:box-shadow .2s ease;
+    background-color:#469257;
+    z-index:10;
+    position:absolute;
+}
+#app-mount .unread-36eUEm:after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color: rgb(21, 255, 0); /*var(--mainColor);*/
+    border-radius:100%;
+    z-index:-2;
+    animation:pulse 2s infinite;
+    will-change:transform;
+}
+#app-mount .unread-36eUEm:hover:after{animation:none}
+#app-mount .divider-2rZFJK:not(.isUnread-3Lojb-){border-color:var(--newmessage01)!important}
+@keyframes pulse{0%{transform:scale(1);opacity:1}100%{transform:scale(2);opacity:0}}
+/*--- ENDE ---*/
+/************************************************************************
+			EMBED HINTERGRUND FARBE
+************************************************************************/
+#app-mount .embedFull-1HGV2S{background:var(--backgroundColor01)!important}
+
+#app-mount .newMessagesBar-1hF-9G{background-color:var(--mainColor01)}
+#app-mount .newBrand .textBadge-1fdDPJ[style*="rgb(88, 101, 242)"]{background-color:var(--mainColor01)!important}
+/*--- ENDE ---*/
+
+/***********************************************************************
+				SETTINGS SIDEBAR
+***********************************************************************/
+#bd-settings-sidebar .ui-tab-bar-item.selected::after,
+.side-2ur1Qk .item-3XjbnG[style*="background-color: rgb(114, 137, 218)"]::after,
+.side-2ur1Qk .themed-2-lozF.selected-g-kMVV.item-3XjbnG::after,
+.topPill-3DJJNV .themed-2-lozF.selected-g-kMVV.item-3XjbnG::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 85%;
+    height: 15%;
+    width: 240px;
+    border-radius: 0px 0 0 4px;
+    background: linear-gradient(to bottom right, var(--themeColor1), var(--themeColor2));
+    z-index: 1;
+}
+
+#bd-settings-sidebar .ui-tab-bar-header,
+.side-2ur1Qk .header-2Kx1US {
+    position: relative;
+    z-index: 2;
+    padding: 19px 8px 2px 16px;
+    margin-bottom: 5px;
+    text-align: center;
+    letter-spacing: 1px;
+    color: #ffffff !important;
+    border-bottom-width: 2px;
+    border-style: solid;
+    border-image: linear-gradient(to right, transparent, var(--themeColor1), var(--themeColor2), transparent) 1;
+}
+
+#bd-settings-sidebar .ui-tab-bar-header::after,
+#bd-settings-sidebar .ui-tab-bar-header::before,
+.side-2ur1Qk .header-2Kx1US::after,
+.side-2ur1Qk .header-2Kx1US::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    top: 0;
+    background-color: transparent;
+    z-index: -1;
+}
+
+#bd-settings-sidebar .ui-tab-bar-header {
+    display: block;
+}
+
+#bd-settings-sidebar .ui-tab-bar-header .bd-changelog-button {
+    position: absolute;
+    bottom: 2px;
+    right: 0;
+}
+
+.side-2ur1Qk .header-2Kx1US:first-child {
+    padding-top: 19px;
+}
+
+.sidebar-nqHbhN {
+    padding-top: 41px;
+}
+
+#bd-settings-sidebar .ui-tab-bar-header::before,
+.side-2ur1Qk .header-2Kx1US::before {
+    left: 0;
+    box-shadow: 80px 50px 30px 0 var(--themeColor2);
+}
+
+#bd-settings-sidebar .ui-tab-bar-header::after,
+.side-2ur1Qk .header-2Kx1US::after {
+    right: 0;
+    box-shadow: -80px 50px 30px 0 var(--themeColor1);
+}
+/*--- ENDE ---*/
